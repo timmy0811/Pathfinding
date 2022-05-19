@@ -34,7 +34,7 @@ private:
 	float dt;
 
 	// Game objects
-	Grid grid;
+	Grid* grid;
 
 public:
 	// Constructors

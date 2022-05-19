@@ -4,7 +4,7 @@
 Game::Game() {
     this->initVariables();
     this->initWindow();
-    this->grid = Grid(sf::Vector2i(5, 5), 50);
+    this->grid = new Grid(sf::Vector2i(20, 20), 50);
 }
 
 // Destructors
@@ -21,8 +21,8 @@ void Game::initVariables() {
 
 // Init game window
 void Game::initWindow() {
-    this->videoMode.height = 600;
-    this->videoMode.width = 800;
+    this->videoMode.height = 1000;
+    this->videoMode.width = 1000;
 
     this->window = new sf::RenderWindow(this->videoMode, this->windowTitle, sf::Style::Titlebar | sf::Style::Close);
     this->window->setFramerateLimit(60);
@@ -76,7 +76,9 @@ void  Game::render() {
         Renders game objects to screen
     */
 
-    this->window->clear(sf::Color(255, 255, 255, 255));
+    this->window->clear(sf::Color(100, 100, 100, 255));
+
+    this->grid->render(this->window);
 
     this->window->display();
 }
