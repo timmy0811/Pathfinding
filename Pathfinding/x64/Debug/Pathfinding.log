@@ -1,2 +1,24 @@
 ﻿  Game.cpp
-  Pathfinding.vcxproj -> C:\Git\Pathfinding\x64\Debug\Pathfinding.exe
+D:\Git\Pathfinding\Pathfinding\Game.cpp(65,110): warning C4244: "Argument": Konvertierung von "T" in "T", möglicher Datenverlust
+          with
+          [
+              T=int
+          ]
+          and
+          [
+              T=float
+          ]
+D:\Git\Pathfinding\Pathfinding\Game.cpp(65,92): warning C4244: "Argument": Konvertierung von "T" in "T", möglicher Datenverlust
+          with
+          [
+              T=int
+          ]
+          and
+          [
+              T=float
+          ]
+  Grid.cpp
+  Tile.cpp
+  main.cpp
+  Code wird generiert...
+  Pathfinding.vcxproj -> D:\Git\Pathfinding\x64\Debug\Pathfinding.exe

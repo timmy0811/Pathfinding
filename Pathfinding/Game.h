@@ -32,6 +32,7 @@ private:
 
 	// Game Logic
 	float dt;
+	sf::Vector2i mousePos;
 
 	// Game objects
 	Grid* grid;

@@ -10,6 +10,7 @@ Game::Game() {
 // Destructors
 Game::~Game() {
     delete this->window;
+    delete this->grid;
 }
 
 // Private functions
@@ -60,10 +61,14 @@ void Game::pollEvents() {
             break;
         }
     }
+    if (sf::Mouse::isButtonPressed(sf::Mouse::Left)) {
+        this->grid->changeState(this->grid->getIntersectingTile(sf::Vector2f(this->mousePos.x, this->mousePos.y)), tileState::WALL);
+    }
 }
 
 // main update method
 void Game::update() {
+    this->mousePos = sf::Mouse::getPosition();
     this->dt = clock.restart().asSeconds();
     this->setTitle();
 
