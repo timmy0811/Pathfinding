@@ -13,7 +13,7 @@ private:
 	const int size;
 	tileState state;
 
-	sf::Vertex* vertex[4];
+	sf::Vertex vertex[4];
 	sf::Color color;
 
 public:
