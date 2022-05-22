@@ -4,7 +4,8 @@
 Game::Game() {
     this->initVariables();
     this->initWindow();
-    this->grid = new Grid(sf::Vector2i(20, 20), 50);
+    this->grid = new Grid(sf::Vector2i(20, 20), 50, true);
+    //this->grid->findPath(sf::Vector2i(5, 5), sf::Vector2i(12, 15));
 }
 
 // Destructors
@@ -58,6 +59,9 @@ void Game::pollEvents() {
         case sf::Event::KeyPressed:
             if (this->ev.key.code == sf::Keyboard::Escape)
                 this->window->close();
+            if (this->ev.key.code == sf::Keyboard::Space) {
+                this->grid->findPath(sf::Vector2i(5, 5), sf::Vector2i(12, 15));
+            }
             break;
         }
     }
@@ -68,7 +72,7 @@ void Game::pollEvents() {
 
 // main update method
 void Game::update() {
-    this->mousePos = sf::Mouse::getPosition();
+    this->mousePos = sf::Mouse::getPosition(*this->window);
     this->dt = clock.restart().asSeconds();
     this->setTitle();
 
