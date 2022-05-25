@@ -39,21 +39,21 @@ void Grid::render(sf::RenderTarget* target)
 			gText.setString(std::to_string(tile->getGCost()));
 			gText.setCharacterSize(12);
 			gText.setFillColor(sf::Color::Black);
-			gText.setPosition(sf::Vector2f(tile->getPosition().x + 1, tile->getPosition().y + 1));
+			gText.setPosition(sf::Vector2f(tile->getPosition().x + 1.f, tile->getPosition().y + 1.f));
 
 			sf::Text fText;
 			fText.setFont(this->font);
 			fText.setString(std::to_string(tile->getFCost()));
 			fText.setCharacterSize(20);
 			fText.setFillColor(sf::Color::Black);
-			fText.setPosition(sf::Vector2f(tile->getPosition().x + 11, tile->getPosition().y + 11));
+			fText.setPosition(sf::Vector2f(tile->getPosition().x + 11.f, tile->getPosition().y + 11.f));
 
 			sf::Text hText;
 			hText.setFont(this->font);
 			hText.setString(std::to_string(tile->getHCost()));
 			hText.setCharacterSize(12);
 			hText.setFillColor(sf::Color::Black);
-			hText.setPosition(sf::Vector2f(tile->getPosition().x + 30, tile->getPosition().y + 30));
+			hText.setPosition(sf::Vector2f(tile->getPosition().x + 30.f, tile->getPosition().y + 30.f));
 
 			target->draw(gText);
 			target->draw(fText);
@@ -129,7 +129,7 @@ void Grid::findPath(sf::Vector2i startNode, sf::Vector2i endNode)
 				neighborNode->setGCost(this->pastGCost + MOVE_DIRECT_COST);
 			}
 
-			if (neighborNode->getFCost() < lowestCost) {
+			if (neighborNode->getFCost() < (unsigned) lowestCost) {
 				lowestCost = neighborNode->getFCost();
 				nextNode = neighborNode;
 			}

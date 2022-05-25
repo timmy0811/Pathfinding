@@ -1,20 +1,6 @@
 ﻿  Game.cpp
-C:\Git\Pathfinding\Pathfinding\Game.cpp(69,110): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
-          with
-          [
-              T=int
-          ]
-          and
-          [
-              T=float
-          ]
-C:\Git\Pathfinding\Pathfinding\Game.cpp(69,92): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
-          with
-          [
-              T=int
-          ]
-          and
-          [
-              T=float
-          ]
-  Pathfinding.vcxproj -> C:\Git\Pathfinding\x64\Debug\Pathfinding.exe
+  Grid.cpp
+  main.cpp
+  Tile.cpp
+  Code wird generiert...
+  Pathfinding.vcxproj -> D:\Git\Pathfinding\x64\Debug\Pathfinding.exe

@@ -66,7 +66,7 @@ void Game::pollEvents() {
         }
     }
     if (sf::Mouse::isButtonPressed(sf::Mouse::Left)) {
-        this->grid->changeState(this->grid->getIntersectingTile(sf::Vector2f(this->mousePos.x, this->mousePos.y)), tileState::WALL);
+        this->grid->changeState(this->grid->getIntersectingTile(sf::Vector2f(static_cast<float>(this->mousePos.x), static_cast<float>(this->mousePos.y))), tileState::WALL);
     }
 }
 
